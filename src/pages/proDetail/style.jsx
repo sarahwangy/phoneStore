@@ -1,26 +1,17 @@
 import styled from "styled-components";
 
-const DetailWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  background: #ffffff;
-  border: 1px solid red;
-  margin: 100px auto;
-  padding: 50px 0;
-  box-size: border-box;
-`;
+export const Image = styled.img``;
 
-const LeftPart = styled.div`
-  width: 500px;
-  height: 750px;
-  border: 1px solid green;
-`;
+export const Title = styled.div`
+  font-size: 30px;
+  font-weight: 600;
+  margin: 0 auto;
+  margin-bottom: 20px;
 
-const RightPart = styled.div`
-  width: 576px;
-  height: 388px;
-  padding: 20px 20px 20px 40px;
-  border: 1px solid red;
+  //  display: flex,
+
+  // justify-content: center,
+  // padding-top: 260px,
 `;
 
 export const DetailTitle = styled.h1`
@@ -28,6 +19,7 @@ export const DetailTitle = styled.h1`
   width: 516px;
   height: 72px;
   margin-top: 0 0 14px;
+  font-style: oblique;
   padding: 15px;
   font: 28px;
 `;
@@ -36,6 +28,7 @@ export const DetailTitle = styled.h1`
 export const DetailPrice = styled.h2`
   position: relative;
   color: #ffffff;
+  font-style: oblique;
   font: 22px;
   background: #00b5ad;
   margin: 30px 0 0 22px;
@@ -88,18 +81,54 @@ export const DetailCategory = styled.h3`
   height: 47px;
   border: 1px solid gray;
   border-radius: 5px;
+  font-style: oblique;
 `;
 
 export const DetailDesc = styled.p`
   color: #777777;
   font-size: 19px;
   margin: 0 0 18px;
-  width: 516px;
+  // width: 516px;
   color: lightblack;
   font-weight: 500;
+  margin: 30px auto;
+`;
+
+export const ButtonOption = styled.div`
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+`;
+
+export const BackButton = styled.div`
+  background-color: #ff3e6c;
+
+  color: #fff;
+  font-size: 18px;
+  margin: 0 0.25em 0 0;
+  padding: 0.78571429em 1.5em 0.78571429em;
+  font-weight: 700;
+
+  font-style: normal;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0.28571429rem;
+  cursor: pointer;
+  &:hover {
+    background-color: white;
+    border: 1px solid #ff3e6c;
+    color: #ff3e6c;
+    transform: scale(1.05);
+  }
 `;
 
 export const DetailCart = styled.div`
+  // display: flex;
+  // align-items: center;
+  // text-align: center;
+  // justify-content: center;
+
   background-color: #ff3e6c;
   border: 1px solid #ff3e6c;
   color: #fff;
@@ -109,7 +138,7 @@ export const DetailCart = styled.div`
   margin-right: auto;
   position: relative;
   overflow: hidden;
-  padding-right: 0 !important;
+  // padding-right: 0 !important;
   vertical-align: middle;
   z-index: 1;
   margin: 0 0.25em 0 0;
@@ -202,4 +231,27 @@ const DetailDivided = styled.div`
     width: 0%;
     height: calc(100% - 1rem);
   }
+`;
+
+const DetailWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  background: #ffffff;
+  border: 1px solid red;
+  margin: 100px auto;
+  padding: 50px 0;
+  box-size: border-box;
+`;
+
+const LeftPart = styled.div`
+  width: 500px;
+  height: 750px;
+  border: 1px solid green;
+`;
+
+const RightPart = styled.div`
+  width: 576px;
+  height: 388px;
+  padding: 20px 20px 20px 40px;
+  border: 1px solid red;
 `;

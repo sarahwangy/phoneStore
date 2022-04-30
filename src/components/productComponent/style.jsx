@@ -16,9 +16,13 @@ export const ListComponentWrapper = styled.div`
   border-radius: 10px;
 
   //  多个hover 怎么写/???
-  &:hover {
+  // &: hover, &:hover 中间加空格 和不加，区别很大！！
+  &: hover {
     box-shadow: 5px 5px 5px 5px gray;
     transition: all 0.5s ease-in-out;
+    // 可以一直解构，直到找到最下面最想要的div，但是这样太麻烦
+    // 可以用 style component 特有的 hover 叠加方法：https://styled-components.com/docs/advanced#referring-to-other-components
+
     // div div div {
     //   box-shadow: 5px 5px 5px 5px red;
     //   transition: all 0.5s ease-in-out;
@@ -39,6 +43,7 @@ export const ImageWrapper = styled.div`
 // 当hover的时候，会出现向左向上的移动
     overflow: hidden;
     position: relative;
+
     width: 180px,
     margin: 0px 15px, 
     height: 200px, 
@@ -92,6 +97,7 @@ export const ListTitle = styled.div`
 export const Price = styled.div`
   margin: 0 0 5px;
   color: #333333;
+  font-style: italic;
 
   // width 宽度不用写固定，后期可以调整
   // width: 232px;

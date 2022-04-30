@@ -1,12 +1,17 @@
 import { Routes, Route, useParams } from "react-router-dom";
 import React, { useEffect, useReducer, useState } from "react";
 import { BsFillCartCheckFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 import {
+  Image,
   DetailCart,
   DetailPrice,
   DetailCategory,
   DetailTitle,
   DetailDesc,
+  ButtonOption,
+  Title,
+  BackButton,
 } from "./style";
 
 import { useProductDetailState } from "../../state-hooks/reducer-hook/productDetail-hook";
@@ -34,45 +39,47 @@ export default function ProductDetail() {
   }
 
   return (
-    <div
-      className="ui grid container"
-      style={{
-        marginTop: "45px",
-      }}
-    >
-      <div className="ui placeholder segment container">
-        <div className="ui two column very relaxed stackable grid">
-          <div className="column">
-            <div className="ui form">
-              <div className="ui  ">
-                <img
-                  src={product.img}
-                  alt={product.title}
-                  style={{
-                    display: "block",
-                    width: "100%",
-                    border: "1px solid red",
-                    margin: "5px",
-                  }}
-                />
+    <>
+      {/* 可以放这里，但是会被上面遮住，所以要给个padding top， margin top之类的 */}
+      <Title>{product.title}</Title>
+      <div
+        className="ui grid container"
+        style={{
+          marginTop: "145px",
+        }}
+      >
+        <div className="ui placeholder segment container">
+          <div className="ui two column very relaxed stackable grid">
+            <div className="column">
+              <div className="ui form">
+                <div className="ui">
+                  {/* 图片出不来，可以价格路径，public 里面的图片，要不然不识别 */}
+                  <Image src={"/" + product.img} alt={product.title} />
+                </div>
               </div>
             </div>
+            <div className=" aligned column">
+              <DetailTitle> Model: {product.title}</DetailTitle>
+              <DetailPrice> $ {product.price} </DetailPrice>
+              <DetailCategory>Made By: {product.company}</DetailCategory>
+              <DetailDesc>{product.info}</DetailDesc>
+              <ButtonOption>
+                <DetailCart>
+                  <div className="hidden content">
+                    <BsFillCartCheckFill size={25} />
+                  </div>
+
+                  <div className="visible">Add To Cart</div>
+                </DetailCart>
+                <Link to={`/`}>
+                  <BackButton>Back to Product</BackButton>
+                </Link>
+              </ButtonOption>
+            </div>
           </div>
-          <div className=" aligned column">
-            <DetailTitle> {product.title}</DetailTitle>
-            <DetailPrice> $ {product.price} </DetailPrice>
-            <DetailCategory>{product.company}</DetailCategory>
-            <DetailDesc>{product.info}</DetailDesc>
-            <DetailCart>
-              <div className="hidden content">
-                <BsFillCartCheckFill size={25} />
-              </div>
-              <div className="visible">Add To Cart</div>
-            </DetailCart>
-          </div>
+          <div className="ui vertical divider">AND</div>
         </div>
-        <div className="ui vertical divider">AND</div>
       </div>
-    </div>
+    </>
   );
 }

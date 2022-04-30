@@ -12,6 +12,7 @@ import {
   Title,
   Button,
 } from "./style";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
@@ -20,7 +21,9 @@ export default function Header() {
         <div className="ui container center"> */}
       <LeftWrapper>
         <LeftPart>
-          <Title> Products</Title>
+          <Link to={`/`}>
+            <Title> Products</Title>
+          </Link>
           <Icon>
             <BsFillTelephoneForwardFill />
           </Icon>
