@@ -6,6 +6,8 @@ import ContactPage from "./pages/contact";
 import Modal from "./components/modal";
 import Cart from "./pages/cart";
 
+import "./App.css";
+
 const ProductDetail = lazy(() => import("./pages/proDetail/index"));
 const ProductsList = lazy(() => import("./pages/proList/index"));
 
