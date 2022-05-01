@@ -45,7 +45,7 @@ export default function ProductDetail() {
       <div
         className="ui grid container"
         style={{
-          marginTop: "145px",
+          marginTop: "60px",
         }}
       >
         <div className="ui placeholder segment container">

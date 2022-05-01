@@ -24,16 +24,20 @@ export default function Header() {
           <Link to={`/`}>
             <Title> Products</Title>
           </Link>
-          <Icon>
-            <BsFillTelephoneForwardFill />
-          </Icon>
+          <Link to={`/contact`}>
+            <Icon>
+              <BsFillTelephoneForwardFill />
+            </Icon>
+          </Link>
         </LeftPart>
       </LeftWrapper>
 
       <RightPart>
-        <Button>
-          <BsFillCartCheckFill /> My Cart
-        </Button>
+        <Link to={`/cart`}>
+          <Button>
+            <BsFillCartCheckFill /> My Cart
+          </Button>
+        </Link>
       </RightPart>
       {/* </div>
       </div> */}

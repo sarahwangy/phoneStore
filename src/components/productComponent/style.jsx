@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+//
 export const ListComponentWrapper = styled.div`
   box-sizing: border-box;
   cursor: pointer;
@@ -17,7 +18,7 @@ export const ListComponentWrapper = styled.div`
 
   //  多个hover 怎么写/???
   // &: hover, &:hover 中间加空格 和不加，区别很大！！
-  &: hover {
+  &:hover {
     box-shadow: 5px 5px 5px 5px gray;
     transition: all 0.5s ease-in-out;
     // 可以一直解构，直到找到最下面最想要的div，但是这样太麻烦
@@ -28,14 +29,6 @@ export const ListComponentWrapper = styled.div`
     //   transition: all 0.5s ease-in-out;
     // }
   }
-`;
-
-export const Content = styled.div`
-  // width 宽度不用写固定，后期可以调整
-  // height:500px,
-  // widht: 500px;
-  // padding: 12px 7px;
-  // background: #ffffff;
 `;
 
 export const ImageWrapper = styled.div`
@@ -51,6 +44,29 @@ export const ImageWrapper = styled.div`
     background: #ffffff
 `;
 
+export const Image = styled.img`
+  height: 190px;
+  width: 165px;
+  margin: 20px;
+
+  //  style components 写hover的方法，表示在点击ListComponentWrapper 下， 图片也发生变化
+  // 这种写法只适合 父子类 的 效果。。。， 不是父子不起效果。
+  ${ListComponentWrapper}:hover & {
+    // transform: translateY(-5%);
+    // height: 200px;
+    // width: 180px;
+    // 如果hover的时候，图片大小变化用width，height表示这会影响下面的高度，下面的图片会闪动
+    // 所以可以用 scale 缩放表示，只是缩放图片大小，并不改变图片的width，height，所以下面图片不晃动
+    transform: scale(1.1);
+  }
+`;
+
+export const Content = styled.div`
+  // width 宽度不用写固定，后期可以调整
+
+  // border: 1px solid red;
+`;
+
 export const BottomWrapper = styled.div`
   border-top: 1px solid lightgray;
   padding: 10px;
@@ -61,23 +77,6 @@ export const BottomWrapper = styled.div`
 
   ${ListComponentWrapper}:hover & {
     background-color: lightgray;
-  }
-`;
-
-export const Image = styled.img`
-  height: 190px;
-  width: 165px;
-  margin: 20px;
-
-  //  style components 写hover的方法，表示在点击ListComponentWrapper 下， 图片也发生变化
-
-  ${ListComponentWrapper}:hover & {
-    // transform: translateY(-5%);
-    // height: 200px;
-    // width: 180px;
-    // 如果hover的时候，图片大小变化用width，height表示这会影响下面的高度，下面的图片会闪动
-    // 所以可以用 scale 缩放表示，只是缩放图片大小，并不改变图片的width，height，所以下面图片不晃动
-    transform: scale(1.1);
   }
 `;
 
@@ -110,7 +109,7 @@ export const Price = styled.div`
 export const Category = styled.div`
   font: 14px;
   color: #00000066;
-  width: 232px;
+  // width: 232px;
   height: 20px;
 
   //  flex很好用，一个元素，父子多个元素都可以用，直接实现放在中间效果
@@ -125,7 +124,7 @@ export const Category = styled.div`
   }
 `;
 
-export const CartWrapper = styled.div`
+export const CartWrapper = styled.button`
   color: white;
   // 美观下的话，可以贴边的地方，没有radius，最上面有radius 弧度
   border-radius: 9px 0 0 0;
@@ -133,6 +132,7 @@ export const CartWrapper = styled.div`
   position: absolute;
   bottom: -50px;
   right: -50px;
+  border: none;
 
   // 可以打开网站，看css 样式调整颜色
   background-color: #009ffd;

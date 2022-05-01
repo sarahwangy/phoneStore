@@ -5,6 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import {
   ProductProvider,
+  ModalProvider,
   ProductDetailProvider,
 } from "./state-hooks/reducer-hook/index";
 
@@ -13,7 +14,9 @@ root.render(
   <React.StrictMode>
     <ProductDetailProvider>
       <ProductProvider>
-        <App />
+        <ModalProvider>
+          <App />
+        </ModalProvider>
       </ProductProvider>
     </ProductDetailProvider>
   </React.StrictMode>

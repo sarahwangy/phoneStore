@@ -5,13 +5,21 @@ export const Image = styled.img``;
 export const Title = styled.div`
   font-size: 30px;
   font-weight: 600;
+  min-height: 50px;
   margin: 0 auto;
   margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 145px;
 
-  //  display: flex,
+  // background-image: -webkit-linear-gradient(...) 为文本元素提供渐变背景。
+  // -webkit-text-fill-color: transparent 使用透明颜色填充文本。
+  // -webkit-background-clip: text 用文本剪辑背景，用渐变背景作为颜色填充文本。
 
-  // justify-content: center,
-  // padding-top: 260px,
+  background-image: -webkit-linear-gradient(bottom, red, #fd8403, yellow);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 `;
 
 export const DetailTitle = styled.h1`
