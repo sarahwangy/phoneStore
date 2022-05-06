@@ -15,8 +15,14 @@ import {
 } from "./style";
 
 import { useProductDetailState } from "../../state-hooks/reducer-hook/productDetail-hook";
+import { useModalState } from "../../state-hooks/reducer-hook/modal-hook";
+import { useCartState } from "../../state-hooks/reducer-hook/cart-hook";
 
 export default function ProductDetail() {
+  const { ModalActions } = useModalState();
+  const { openModal } = ModalActions;
+  const { CartActions, CartState } = useCartState();
+  const { addItemToCart } = CartActions;
   let params = useParams();
 
   // use context
@@ -64,13 +70,26 @@ export default function ProductDetail() {
               <DetailCategory>Made By: {product.company}</DetailCategory>
               <DetailDesc>{product.info}</DetailDesc>
               <ButtonOption>
-                <DetailCart>
-                  <div className="hidden content">
-                    <BsFillCartCheckFill size={25} />
-                  </div>
+                <DetailCart
+                  disabled={product.inCart}
+                  onClick={() => {
+                    openModal(product.id);
+                    addItemToCart(product.id);
+                  }}
+                >
+                  {product.inCart ? (
+                    <p>In Cart</p>
+                  ) : (
+                    <>
+                      <div className="hidden content">
+                        <BsFillCartCheckFill size={25} />
+                      </div>
 
-                  <div className="visible">Add To Cart</div>
+                      <div className="visible">Add To Cart</div>
+                    </>
+                  )}
                 </DetailCart>
+
                 <Link to={`/`}>
                   <BackButton>Back to Product</BackButton>
                 </Link>

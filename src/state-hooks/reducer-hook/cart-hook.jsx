@@ -2,83 +2,64 @@ import { OPEN_MODAL, CLOSE_MODAL } from "../../constants/index";
 import { useReducer, useContext, createContext } from "react";
 // 动态的数据，state，不能直接引用 data 固定的值，要获取 context里面最新的productstate的值
 import { storeProducts } from "../../data";
-
-// 从同一文件夹里面引用 另一个 hook 的 context。。。！！！相当于redux 里面的状态互相引用共享
-// 只不过usecontext 需要调成 上下级 子孙关系才可以。
 import { useProductState } from "./productList-hook";
-//  actions
-
-export const openModalType = (data) => ({ type: OPEN_MODAL, data });
-export const closeModalType = () => ({ type: CLOSE_MODAL });
-
-// 不建议用这种方法，因为这是modal 接收的是动态的 product state里面的值，不是store product里面固定写的值
-// 比如后期会更新cart total count，这样就可以从product state里面获取最新的值
-// export const getDetailDataAction = (dispatch) => {
-//   return (id) => {
-//     const findContent = storeProducts[id];
-//     dispatch(getDetail(findContent));
-//   };
-// };
-
-// // 比如后期会更新cart total count，这样就可以从product state里面获取最新的值
-export const GetModalActions = (productState, dispatch) => {
-  // 根据 ID find 匹配的值，用这些值更新 modal 页面 的action，进而更新state
-  //   ，modal可以获取 modal state的值，渲染modal页面
-  const getItem = (id) => productState.products.find((item) => item.id === id);
-
-  const openModal = (id) => {
-    const Modalitem = getItem(id);
-
-    console.log("modal item", Modalitem);
-    dispatch(openModalType(Modalitem));
-  };
-
-  const closeModal = () => {
-    dispatch(closeModalType());
-  };
-
-  return {
-    openModal,
-    closeModal,
-  };
-};
+import { getCartActions } from "../actions/cartAction";
+import {
+  ADD_ITEM_TO_CART,
+  INCREMENT_ITEM,
+  DECREMENT_ITEM,
+  ADD_TOTALS,
+  REMOVE_ITEM_FROM_CART,
+  CLEAR_CART,
+} from "../../constants";
 
 // reducer
 
 const initialState = {
-  openModal: false,
-  Modalproduct: {},
+  cart: [],
+  subtotal: 0,
+  total: 0,
+  tax: 0,
 };
 
-const ModalReducer = (state = initialState, action) => {
+const CartReducer = (state = initialState, action) => {
   switch (action.type) {
-    case OPEN_MODAL:
-      console.log("action data modal", action.data);
-      return { openModal: true, Modalproduct: action.data };
-    case CLOSE_MODAL:
-      return { openModal: false, Modalproduct: {} };
+    case ADD_ITEM_TO_CART:
+      // console.log("action data modal", action.data);
+      return { ...state, cart: action.data };
+    case INCREMENT_ITEM:
+      return { ...state, cart: action.data };
+    case DECREMENT_ITEM:
+      return { ...state, cart: action.data };
+    case ADD_TOTALS:
+      const { subtotal, tax, total } = action.data;
+      return { ...state, subtotal, tax, total };
+    case REMOVE_ITEM_FROM_CART:
+      return { ...state, cart: action.data };
+    case CLEAR_CART:
+      return { initialState };
     default:
       return state;
   }
 };
 
 // use context
-export const ModalContext = createContext(initialState);
+export const CartContext = createContext(initialState);
 
-export const useModalState = () => {
-  return useContext(ModalContext);
+export const useCartState = () => {
+  return useContext(CartContext);
 };
 
 //  use reducer
-export const ModalProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(ModalReducer, initialState);
+export const CartProvider = ({ children }) => {
+  const [cartState, dispatch] = useReducer(CartReducer, initialState);
 
   const { productState } = useProductState();
   // Actions是lDataAction 返回的函数。。。
-  const ModalActions = GetModalActions(productState, dispatch);
+  const CartActions = getCartActions({ productState, cartState }, dispatch);
   return (
-    <ModalContext.Provider value={{ ModalState: state, ModalActions }}>
+    <CartContext.Provider value={{ CartState: cartState, CartActions }}>
       {children}
-    </ModalContext.Provider>
+    </CartContext.Provider>
   );
 };

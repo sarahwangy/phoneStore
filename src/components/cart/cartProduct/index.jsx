@@ -11,9 +11,57 @@ import {
   PlusButton,
   CCount,
   Count,
+  ImageWrapper,
   CDelete,
   CTotal,
 } from "./style";
+
+import { Row, Col, Divider } from "antd";
+import { useCartState } from "../../../state-hooks/reducer-hook/cart-hook";
+
+const style = { background: "#fff", padding: "8px ", fontSize: "18px" };
+
+export default function CartProduct({ cartObj }) {
+  const { CartActions } = useCartState();
+  const { inc, dec, removeItemFromCart } = CartActions;
+  const { id, title, img, price, total, count } = cartObj;
+  return (
+    <Product>
+      <Row justify="start" gutter={16}>
+        <Col className="gutter-row" span={4}>
+          <div style={style}>
+            <ImageWrapper>
+              <img src={"/" + img} alt={title} />
+            </ImageWrapper>
+          </div>
+        </Col>
+        <Col className="gutter-row" span={4}>
+          <div style={style}>{title}</div>
+        </Col>
+        <Col className="gutter-row" span={4}>
+          <div style={style}>${price}</div>
+        </Col>
+        <Col className="gutter-row" span={4}>
+          <div style={style}>
+            <Count>
+              <MinusButton onClick={() => dec(id)}>-</MinusButton>
+              <CCount>{count}</CCount>
+              <PlusButton onClick={() => inc(id)}>+</PlusButton>
+            </Count>
+          </div>
+        </Col>
+        <Col className="gutter-row" span={4}>
+          <div onClick={() => removeItemFromCart(id)} style={style}>
+            <AiOutlineDelete />
+          </div>
+        </Col>
+        <Col className="gutter-row" span={4}>
+          <div style={style}>${total}</div>
+        </Col>
+      </Row>
+    </Product>
+  );
+}
 
 // export default function CartProduct() {
 //   return (
@@ -33,44 +81,3 @@ import {
 //     </ProductWrapper>
 //   );
 // }
-
-import { Row, Col, Divider } from "antd";
-
-const style = { background: "#fff", padding: "8px ", fontSize: "18px" };
-
-export default function CartProduct() {
-  return (
-    <Product>
-      <Row justify="start" gutter={16}>
-        <Col className="gutter-row" span={4}>
-          <div style={style}>
-            <img src="" alt="" />
-          </div>
-        </Col>
-        <Col className="gutter-row" span={4}>
-          <div style={style}>kk</div>
-        </Col>
-        <Col className="gutter-row" span={4}>
-          <div style={style}>$000</div>
-        </Col>
-        <Col className="gutter-row" span={4}>
-          <div style={style}>
-            <Count>
-              <MinusButton>-</MinusButton>
-              <CCount>99</CCount>
-              <PlusButton>+</PlusButton>
-            </Count>
-          </div>
-        </Col>
-        <Col className="gutter-row" span={4}>
-          <div style={style}>
-            <AiOutlineDelete />
-          </div>
-        </Col>
-        <Col className="gutter-row" span={4}>
-          <div style={style}>$000</div>
-        </Col>
-      </Row>
-    </Product>
-  );
-}

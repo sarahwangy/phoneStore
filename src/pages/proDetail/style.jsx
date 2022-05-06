@@ -131,7 +131,7 @@ export const BackButton = styled.div`
   }
 `;
 
-export const DetailCart = styled.div`
+export const DetailCart = styled.button`
   // display: flex;
   // align-items: center;
   // text-align: center;

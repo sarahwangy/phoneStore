@@ -1,22 +1,26 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
+
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import {
   ProductProvider,
   ModalProvider,
   ProductDetailProvider,
+  CartProvider,
 } from "./state-hooks/reducer-hook/index";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+    {/* // 这里可以直接引用StateProvider ，里面包含了其他三个provider */}
     <ProductDetailProvider>
       <ProductProvider>
-        <ModalProvider>
-          <App />
-        </ModalProvider>
+        <CartProvider>
+          <ModalProvider>
+            <App />
+          </ModalProvider>
+        </CartProvider>
       </ProductProvider>
     </ProductDetailProvider>
   </React.StrictMode>

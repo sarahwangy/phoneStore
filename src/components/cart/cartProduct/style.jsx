@@ -17,11 +17,26 @@ export const Count = styled.div`
   justify-content: center;
 `;
 
-export const CImage = styled.div``;
-export const CTitle = styled.div``;
-export const CPrice = styled.div``;
-export const MinusButton = styled.div``;
-export const PlusButton = styled.div``;
-export const CCount = styled.div``;
-export const CDelete = styled.div``;
-export const CTotal = styled.div``;
+export const MinusButton = styled.div`
+  border: 1px solid black;
+  padding: 0 8px;
+`;
+export const PlusButton = styled.div`
+  border: 1px solid black;
+  padding: 0 8px;
+`;
+export const CCount = styled.div`
+  border: 1px solid black;
+  padding: 0 3px;
+`;
+
+export const ImageWrapper = styled.div`
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 80px;
+    height: 70px;
+  }
+`;

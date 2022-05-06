@@ -14,12 +14,15 @@ import {
   CartWrapper,
 } from "./style";
 import { useModalState } from "../../state-hooks/reducer-hook/modal-hook";
+import { useCartState } from "../../state-hooks/reducer-hook/cart-hook";
 
 export default function ProductComponent(props) {
   console.log(props, "props com");
 
   const { ModalActions } = useModalState();
   const { openModal } = ModalActions;
+  const { CartActions, CartState } = useCartState();
+  const { addItemToCart } = CartActions;
 
   // console.log(JSON.stringify(props), "json string props")
   return (
@@ -63,12 +66,19 @@ export default function ProductComponent(props) {
                       <Image src={product.img} alt={product.title} />
                       {/* cart  可以放在image这里包裹，这样一开始隐藏，后面可以transform改变位置，显示在image旁边*/}
                     </Link>
+
                     <CartWrapper
+                      disabled={product.inCart}
                       onClick={() => {
                         openModal(product.id);
+                        addItemToCart(product.id);
                       }}
                     >
-                      <BsFillCartCheckFill style={{ margin: "5px" }} />
+                      {product.inCart ? (
+                        <p>In Cart</p>
+                      ) : (
+                        <BsFillCartCheckFill style={{ margin: "5px" }} />
+                      )}
                     </CartWrapper>
                   </ImageWrapper>
 

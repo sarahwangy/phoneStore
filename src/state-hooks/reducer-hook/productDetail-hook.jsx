@@ -1,20 +1,7 @@
 import { GET_DETAIL, REMOVE_DETAIL } from "../../constants/index";
 import { useReducer, useContext, createContext } from "react";
 import { storeProducts } from "../../data";
-// 不用 json fake API，用 data js 代替，这样方便部署 deploy
-// import ProductsList from "../config/productList.json";
-
-//  actions
-
-export const removeDetail = () => ({ type: REMOVE_DETAIL });
-export const getDetail = (data) => ({ type: GET_DETAIL, data });
-
-export const getDetailDataAction = (dispatch) => {
-  return (id) => {
-    const findContent = storeProducts[id];
-    dispatch(getDetail(findContent));
-  };
-};
+import { getDetailDataAction } from "../actions/productDetailAction";
 
 // reducer
 
