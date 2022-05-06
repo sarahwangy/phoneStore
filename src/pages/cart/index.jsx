@@ -18,8 +18,8 @@ export default function Cart() {
         <CartHead />
         <CartList />
         <CartBottom />
+        <CartEmpty />
       </CartWrapper>
-      <CartEmpty />
     </>
   );
 }

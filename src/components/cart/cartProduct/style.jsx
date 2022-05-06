@@ -8,6 +8,15 @@ export const ProductWrapper = styled.div`
   justify-content: space-between;
 `;
 
+export const Product = styled.div`
+  text-align: center;
+`;
+export const Count = styled.div`
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+`;
+
 export const CImage = styled.div``;
 export const CTitle = styled.div``;
 export const CPrice = styled.div``;
