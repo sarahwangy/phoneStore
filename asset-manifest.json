@@ -1,19 +1,27 @@
 {
   "files": {
     "main.css": "/phoneStore/static/css/main.7cc3b24a.css",
-    "main.js": "/phoneStore/static/js/main.61b44e6a.js",
-    "static/js/686.610b36b2.chunk.js": "/phoneStore/static/js/686.610b36b2.chunk.js",
-    "static/js/276.5c552918.chunk.js": "/phoneStore/static/js/276.5c552918.chunk.js",
+    "main.js": "/phoneStore/static/js/main.f7e3bc6f.js",
+    "static/js/686.fb35125a.chunk.js": "/phoneStore/static/js/686.fb35125a.chunk.js",
+    "static/js/276.9738ea56.chunk.js": "/phoneStore/static/js/276.9738ea56.chunk.js",
     "static/js/787.435633f0.chunk.js": "/phoneStore/static/js/787.435633f0.chunk.js",
+    "static/media/product-4.jpg": "/phoneStore/static/media/product-4.8c6463f2c18a169104e2.jpg",
+    "static/media/product-7.jpg": "/phoneStore/static/media/product-7.a8a9bad49387e8f75df2.jpg",
+    "static/media/product-3.jpg": "/phoneStore/static/media/product-3.427f3548d509c99d9665.jpg",
+    "static/media/product-8.jpg": "/phoneStore/static/media/product-8.4cbf9359db4c7b689d29.jpg",
+    "static/media/product-6.jpg": "/phoneStore/static/media/product-6.c432d3c47b0e2538ac8b.jpg",
+    "static/media/product-5.jpg": "/phoneStore/static/media/product-5.957219139797cbc8f3f9.jpg",
+    "static/media/product-2.jpg": "/phoneStore/static/media/product-2.6da9a6acdd12187b3954.jpg",
+    "static/media/product-1.jpg": "/phoneStore/static/media/product-1.c6ea36f0d9dd898f688f.jpg",
     "index.html": "/phoneStore/index.html",
     "main.7cc3b24a.css.map": "/phoneStore/static/css/main.7cc3b24a.css.map",
-    "main.61b44e6a.js.map": "/phoneStore/static/js/main.61b44e6a.js.map",
-    "686.610b36b2.chunk.js.map": "/phoneStore/static/js/686.610b36b2.chunk.js.map",
-    "276.5c552918.chunk.js.map": "/phoneStore/static/js/276.5c552918.chunk.js.map",
+    "main.f7e3bc6f.js.map": "/phoneStore/static/js/main.f7e3bc6f.js.map",
+    "686.fb35125a.chunk.js.map": "/phoneStore/static/js/686.fb35125a.chunk.js.map",
+    "276.9738ea56.chunk.js.map": "/phoneStore/static/js/276.9738ea56.chunk.js.map",
     "787.435633f0.chunk.js.map": "/phoneStore/static/js/787.435633f0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7cc3b24a.css",
-    "static/js/main.61b44e6a.js"
+    "static/js/main.f7e3bc6f.js"
   ]
 }
