@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import breakpoint from "../../breakpoints";
 
 export const HeaderWrapper = styled.div`
   display: flex;
@@ -16,6 +17,10 @@ export const HeaderWrapper = styled.div`
 
   background-color: #4183c4;
   // color: orange;
+
+  @media ${breakpoint.device.xs} {
+    flex-direction: column;
+  }
 `;
 
 export const LeftWrapper = styled.div`
@@ -29,6 +34,10 @@ export const LeftPart = styled.div`
   //   justify-content: space-between;
   //   border: 1px solid red;
   margin-left: 80px;
+
+  @media ${breakpoint.device.xs} {
+    margin-left: 0px;
+  }
 `;
 
 export const Title = styled.div`

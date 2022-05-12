@@ -1,6 +1,27 @@
 import styled from "styled-components";
+import breakpoint from "../../breakpoints";
 
 //
+
+export const ProductWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  box-size: border-box;
+  margin: 0 300px;
+
+  // 响应式设计网页
+  @media ${breakpoint.device.xs} {
+    margin-left: 130px;
+  }
+  @media ${breakpoint.device.sm} {
+    // margin-left: 350px;
+  }
+`;
+
 export const ListComponentWrapper = styled.div`
   box-sizing: border-box;
   cursor: pointer;

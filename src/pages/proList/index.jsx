@@ -1,6 +1,8 @@
 import React, { Component, useEffect } from "react";
 import ProductComponent from "../../components/productComponent";
 import { useProductState } from "../../state-hooks/reducer-hook/productList-hook";
+import "./style";
+import { proListWrapper } from "./style";
 
 export default function ProductsList() {
   const { productState } = useProductState();
@@ -17,13 +19,8 @@ export default function ProductsList() {
   }
 
   return (
-    <div
-      style={{
-        backgroundColor: "rgba(211, 211, 211, 0.927)",
-        margin: "0 auto",
-      }}
-    >
+    <proListWrapper>
       <ProductComponent products={products} />
-    </div>
+    </proListWrapper>
   );
 }

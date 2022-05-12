@@ -12,6 +12,7 @@ import {
   Category,
   Image,
   CartWrapper,
+  ProductWrapper,
 } from "./style";
 import { useModalState } from "../../state-hooks/reducer-hook/modal-hook";
 import { useCartState } from "../../state-hooks/reducer-hook/cart-hook";
@@ -38,17 +39,7 @@ export default function ProductComponent(props) {
       >
         Our Products
       </h1>
-      <div
-        style={{
-          margin: "0 auto",
-          display: "flex",
-          justifyContent: "center",
-          flexDirection: "row",
-          flexWrap: "wrap",
-          boxSizing: "border-box",
-          // border: "1px solid red",
-        }}
-      >
+      <ProductWrapper>
         {props.products.map((product) => {
           return (
             // link后 里面的子 div 文字变成了 a 标签 带下划线，用style={{ textDecoration: 'none' }} 可以去除下划线
@@ -92,7 +83,7 @@ export default function ProductComponent(props) {
             </>
           );
         })}
-      </div>
+      </ProductWrapper>
     </>
   );
 }

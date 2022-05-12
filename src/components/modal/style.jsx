@@ -16,17 +16,26 @@ export const MContainer = styled.div`
 export const MContent = styled.div`
   display: flex;
   align-items: center;
+  align-content: center;
   flex-direction: column;
   justify-content: center;
+
+  // 不能这样写固定，这样只会适合一个屏幕，scree 大小变了，就不responsive了
   // box-sizing: border-box;
-  margin-top: 200px;
+  // margin-top: 200px;
   // border: 1px solid black;
   background: #f3f3f3;
-  margin: 200px 400px;
-  padding-bottom: 60px;
-  padding-top: 60px;
-  width: 400px;
-  height: 500px;
+  // margin: 200px 400px;
+  padding: 60px;
+  // padding-top: 60px;
+  // width: 400px;
+  // height: 500px;
+  // 参考：https://stackoverflow.com/questions/39627549/how-to-center-modal-to-the-center-of-screen
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 `;
 export const MImageWrapper = styled.div`
   box-sizing: border-box;

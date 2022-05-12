@@ -1,11 +1,15 @@
 import styled from "styled-components";
+import breakpoint from "../../../breakpoints";
 
 export const ProductWrapper = styled.div`
   display: flex;
   font-size: 20px;
-
   align-items: center;
   justify-content: space-between;
+
+  @media ${breakpoint.device.xs} {
+    font-size: 10px;
+  }
 `;
 
 export const Product = styled.div`

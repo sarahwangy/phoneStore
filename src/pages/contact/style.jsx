@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import breakpoint from "../../breakpoints";
 
 export const Title = styled.p`
   font-size: 40px;
@@ -23,19 +24,17 @@ export const Contact = styled.div`
   justify-content: center;
   // flex-direction: column;
   // flex-wrap: wrap;
+  @media ${breakpoint.device.xs} {
+    margin-top: 150px;
+  }
 `;
 
 //  style component 下面可以继续往下深挖 元素 HTML， 类似于scss了
 export const FormWrapper = styled.div`
-  // display: flex;
   margin: 20px;
-  // align-items: center;
-  // justify-content: space-between;
-  // flex-direction: column;
   flex-wrap: wrap;
-
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
   padding: 20px;
@@ -44,6 +43,10 @@ export const FormWrapper = styled.div`
     padding: 10px;
     margin: 20px;
     width: 400px;
+
+    @media ${breakpoint.device.xs} {
+      width: 300px;
+    }
   }
 
   & textarea {
@@ -51,6 +54,9 @@ export const FormWrapper = styled.div`
     padding: 10px;
     width: 400px;
     font-size: 23px;
+    @media ${breakpoint.device.xs} {
+      width: 300px;
+    }
   }
 
   & button {
