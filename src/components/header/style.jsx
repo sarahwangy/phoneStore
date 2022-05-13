@@ -16,10 +16,14 @@ export const HeaderWrapper = styled.div`
   padding-bottom: 15px;
 
   background-color: #4183c4;
-  // color: orange;
+  // flex-direction: row;
+  color: orange;
 
   @media ${breakpoint.device.xs} {
     flex-direction: column;
+  }
+  @media ${breakpoint.device.lg} {
+    flex-direction: row;
   }
 `;
 
@@ -31,13 +35,8 @@ export const LeftPart = styled.div`
   display: flex;
   align-items: center;
   text-align: center;
-  //   justify-content: space-between;
-  //   border: 1px solid red;
-  margin-left: 80px;
 
-  @media ${breakpoint.device.xs} {
-    margin-left: 0px;
-  }
+  margin-left: 80px;
 `;
 
 export const Title = styled.div`

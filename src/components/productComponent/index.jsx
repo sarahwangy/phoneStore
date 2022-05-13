@@ -31,7 +31,6 @@ export default function ProductComponent(props) {
       <h1
         style={{
           display: "flex",
-
           justifyContent: "center",
           paddingTop: "100px",
           marginBottom: "40px",
@@ -41,6 +40,7 @@ export default function ProductComponent(props) {
       </h1>
       <ProductWrapper>
         {props.products.map((product) => {
+          console.log("product ...", product);
           return (
             // link后 里面的子 div 文字变成了 a 标签 带下划线，用style={{ textDecoration: 'none' }} 可以去除下划线
             // https://stackoverflow.com/questions/37669391/how-to-get-rid-of-underline-for-link-component-of-react-router

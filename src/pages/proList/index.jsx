@@ -2,7 +2,7 @@ import React, { Component, useEffect } from "react";
 import ProductComponent from "../../components/productComponent";
 import { useProductState } from "../../state-hooks/reducer-hook/productList-hook";
 import "./style";
-import { proListWrapper } from "./style";
+import { ProListWrapper } from "./style";
 
 export default function ProductsList() {
   const { productState } = useProductState();
@@ -19,8 +19,8 @@ export default function ProductsList() {
   }
 
   return (
-    <proListWrapper>
+    <ProListWrapper>
       <ProductComponent products={products} />
-    </proListWrapper>
+    </ProListWrapper>
   );
 }

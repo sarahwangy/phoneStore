@@ -18,10 +18,10 @@ export const CartHeader = styled.div`
   margin-bottom: 30px;
   // border: 1px solid red;
 
-  @media ${breakpoint.device.xs} {
-    font-size: 10px;
-    font-weight: 600;
-  }
+  // @media ${breakpoint.device.xs} {
+  //   font-size: 10px;
+  //   font-weight: 600;
+  // }
 `;
 
 export const Title = styled.div`

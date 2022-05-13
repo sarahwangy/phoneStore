@@ -2,6 +2,7 @@ import { Routes, Route, useParams } from "react-router-dom";
 import React, { useEffect, useReducer, useState } from "react";
 import { BsFillCartCheckFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
+
 import {
   Image,
   DetailCart,
@@ -60,7 +61,7 @@ export default function ProductDetail() {
               <div className="ui form">
                 <div className="ui">
                   {/* 图片出不来，可以价格路径，public 里面的图片，要不然不识别 */}
-                  <Image src={"/" + product.img} alt={product.title} />
+                  <Image src={product.img} alt={product.title} />
                 </div>
               </div>
             </div>

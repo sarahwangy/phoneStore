@@ -1,6 +1,12 @@
 import styled from "styled-components";
+import breakpoint from "../../breakpoints";
 
-export const Image = styled.img``;
+export const Image = styled.img`
+  @media ${breakpoint.device.xs} {
+    width: 80%;
+    margin: 0 auto;
+  }
+`;
 
 export const Title = styled.div`
   font-size: 30px;

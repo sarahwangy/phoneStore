@@ -10,16 +10,8 @@ export const ProductWrapper = styled.div`
   align-content: center;
   flex-direction: row;
   flex-wrap: wrap;
-  box-size: border-box;
+  // box-size: border-box;
   margin: 0 300px;
-
-  // 响应式设计网页
-  @media ${breakpoint.device.xs} {
-    margin-left: 130px;
-  }
-  @media ${breakpoint.device.sm} {
-    // margin-left: 350px;
-  }
 `;
 
 export const ListComponentWrapper = styled.div`
@@ -53,22 +45,22 @@ export const ListComponentWrapper = styled.div`
 `;
 
 export const ImageWrapper = styled.div`
-// 这个是 cart小车的父类，小车包在了 imagewrapper 里面，这样一开始可以隐藏起来
-// 当hover的时候，会出现向左向上的移动
-    overflow: hidden;
-    position: relative;
+  // 这个是 cart小车的父类，小车包在了 imagewrapper 里面，这样一开始可以隐藏起来
+  // 当hover的时候，会出现向左向上的移动
+  overflow: hidden;
+  position: relative;
 
-    width: 180px,
-    margin: 0px 15px, 
-    height: 200px, 
-    padding: 10px,
-    background: #ffffff
+  width: 180px;
+  margin: 0 auto;
+  height: 200px;
+  padding: 10px;
+  background: #fff;
 `;
 
 export const Image = styled.img`
   height: 190px;
   width: 165px;
-  margin: 20px;
+  margin-right: 10px;
 
   //  style components 写hover的方法，表示在点击ListComponentWrapper 下， 图片也发生变化
   // 这种写法只适合 父子类 的 效果。。。， 不是父子不起效果。

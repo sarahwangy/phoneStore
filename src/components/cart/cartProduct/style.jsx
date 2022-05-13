@@ -7,9 +7,9 @@ export const ProductWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  @media ${breakpoint.device.xs} {
-    font-size: 10px;
-  }
+  // @media ${breakpoint.device.xs} {
+  //   font-size: 10px;
+  // }
 `;
 
 export const Product = styled.div`

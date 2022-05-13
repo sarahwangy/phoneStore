@@ -27,6 +27,9 @@ export const Contact = styled.div`
   @media ${breakpoint.device.xs} {
     margin-top: 150px;
   }
+  @media ${breakpoint.device.lg} {
+    margin-top: 100px;
+  }
 `;
 
 //  style component 下面可以继续往下深挖 元素 HTML， 类似于scss了
@@ -47,6 +50,9 @@ export const FormWrapper = styled.div`
     @media ${breakpoint.device.xs} {
       width: 300px;
     }
+    @media ${breakpoint.device.lg} {
+      width: 500px;
+    }
   }
 
   & textarea {
@@ -56,6 +62,9 @@ export const FormWrapper = styled.div`
     font-size: 23px;
     @media ${breakpoint.device.xs} {
       width: 300px;
+    }
+    @media ${breakpoint.device.lg} {
+      width: 500px;
     }
   }
 

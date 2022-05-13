@@ -23,12 +23,12 @@ export default function Modal() {
 
   if (!openModal) return null;
   return (
-    <MContainer>
+    <MContainer onClick={() => closeModal()}>
       <MContent>
         <p>Item added to cart</p>
         <MImageWrapper>
           {/* Modalproduct.img */}
-          <img src={"/" + img} alt="" />
+          <img src={img} alt="" />
         </MImageWrapper>
         <MTitle>{title}</MTitle>
         <MPrice>Price: $ {price}</MPrice>
