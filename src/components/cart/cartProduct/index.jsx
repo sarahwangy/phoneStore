@@ -31,7 +31,7 @@ export default function CartProduct({ cartObj }) {
         <Col className="gutter-row" span={4}>
           <div style={style}>
             <ImageWrapper>
-              <img src={"/" + img} alt={title} />
+              <img src={img} alt={title} />
             </ImageWrapper>
           </div>
         </Col>
