@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/phoneStore/static/css/main.7cc3b24a.css",
-    "main.js": "/phoneStore/static/js/main.f7e3bc6f.js",
+    "main.js": "/phoneStore/static/js/main.26a6998c.js",
     "static/js/686.fb35125a.chunk.js": "/phoneStore/static/js/686.fb35125a.chunk.js",
-    "static/js/276.9738ea56.chunk.js": "/phoneStore/static/js/276.9738ea56.chunk.js",
+    "static/js/276.b257e9da.chunk.js": "/phoneStore/static/js/276.b257e9da.chunk.js",
     "static/js/787.435633f0.chunk.js": "/phoneStore/static/js/787.435633f0.chunk.js",
     "static/media/product-4.jpg": "/phoneStore/static/media/product-4.8c6463f2c18a169104e2.jpg",
     "static/media/product-7.jpg": "/phoneStore/static/media/product-7.a8a9bad49387e8f75df2.jpg",
@@ -15,13 +15,13 @@
     "static/media/product-1.jpg": "/phoneStore/static/media/product-1.c6ea36f0d9dd898f688f.jpg",
     "index.html": "/phoneStore/index.html",
     "main.7cc3b24a.css.map": "/phoneStore/static/css/main.7cc3b24a.css.map",
-    "main.f7e3bc6f.js.map": "/phoneStore/static/js/main.f7e3bc6f.js.map",
+    "main.26a6998c.js.map": "/phoneStore/static/js/main.26a6998c.js.map",
     "686.fb35125a.chunk.js.map": "/phoneStore/static/js/686.fb35125a.chunk.js.map",
-    "276.9738ea56.chunk.js.map": "/phoneStore/static/js/276.9738ea56.chunk.js.map",
+    "276.b257e9da.chunk.js.map": "/phoneStore/static/js/276.b257e9da.chunk.js.map",
     "787.435633f0.chunk.js.map": "/phoneStore/static/js/787.435633f0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7cc3b24a.css",
-    "static/js/main.f7e3bc6f.js"
+    "static/js/main.26a6998c.js"
   ]
 }
