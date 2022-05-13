@@ -10,16 +10,16 @@ export const ProductWrapper = styled.div`
   align-content: center;
   flex-direction: row;
   flex-wrap: wrap;
-  // box-size: border-box;
+  // box-sizing: border-box;
   margin: 0 300px;
 `;
 
 export const ListComponentWrapper = styled.div`
-  box-sizing: border-box;
+  // box-sizing: border-box;
   cursor: pointer;
   // line-height: 20px;
   // margin: -1px -1px;
-  // overflow: hidden;
+  overflow: hidden;
   margin: 10px 10px;
   background-color: white;
 
