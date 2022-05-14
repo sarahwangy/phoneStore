@@ -1,70 +1,180 @@
-# Getting Started with Create React App
+# Phone-Store
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description:
 
-## Available Scripts
+This is a e-commerce phone store shopping website that users can look through the different types of phones
+in the home page, and check the phone details like phone's name, category, price in the detail page; the phones can be
+added into cart page by open modal's cart or click the 'add to cart' button in the detail page.
+It will show users the subtotal, tax and total amount of his or her cart.
+\
+<br/>
+\
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+1. [Technical Features](#tech)
+   - [how to start?](#start)
+2. [User Guidelines](#user)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+   - [Home page](#home)
+   - [Home-cart part](#homecart)
+   - [Home-incart part](#incart)
+   - [Modal part](#modal)
+   - [Detail page](#detail)
+   - [Cart page](#cart)
+   - [Empty cart part](#empty)
+   - [Contact page](#contact)
+   - [Error page](#error)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. [What did I learn?](#learn)
+   - [Lessons Learned](#lessons)
+4. [Future Work](#future)
 
-### `npm test`
+## Technical Features <a id="tech"></a>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### how to start? <a id="start"></a>
 
-### `npm run build`
+- This project was created by 'Create React App' script.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- To run the app in development mode, you can run from project directory:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+`npm start`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Runs the app in the development mode.Open http://localhost:3000 to view it in your browser.
+- The page will reload when you make changes.\
 
-### `npm run eject`
+## User Guidelines <a id="user"></a>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### Home page <a id="home"></a>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![image info](./public/img/home-page.jpeg)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Users can view all phones in the website.
+- Other status will be hidden if users have not done anything about the web just viewed it.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### Home-cart part <a id="homecart"></a>
 
-## Learn More
+![image info](./public/img/home-cart.jpeg)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- When users move into the phone image part, it will show 'cart' image to users
+- Users can click the 'cart' image, it will open 'modal' part immediately.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### Modal part <a id="modal"></a>
 
-### Code Splitting
+![image info](./public/img/modal.jpeg)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- The modal part always stay in the center of the website.
+- It will show users the product in detail and enable users to add the phone to cart by clicking 'go to cart' button
+  or go back to home page by clicking 'back' button if the users change mind.
 
-### Analyzing the Bundle Size
+#### Home-incart part <a id="incart"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![image info](./public/img/home-incart.jpeg)
 
-### Making a Progressive Web App
+- If users added the phone to cart, the cart part will not show 'cart' image
+  instead of 'InCart' words, which can let users know this product has already
+  in cart now.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+#### Detail page<a id="detail"></a>
 
-### Advanced Configuration
+![image info](./public/img/detail-page.jpeg)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- When users click any image of phones, it will transfer to detail page soon,
+  the phone's name, price, category and description will show in detail page.
+- Also, users can add the phone to cart by clicking 'add to cart' button or go
+  back to home page by clicking 'back to product' button.
 
-### Deployment
+#### Cart page<a id="cart"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+![image info](./public/img/cart-page.jpeg)
 
-### `npm run build` fails to minify
+- In cart page, it show users which product has already be added in cart now, and display
+  subtotal, tax and total amount they need to pay.
+- If users would like to change the number of phones which already stay in cart page now, they can click
+  the symbols of '-' and '+' to decrease or increase the number of phones.
+- If users would like to remove this phone, they can click the 'remove' button to delete that one.
+- If users would like to delete all products that already in cart now, they can click 'clear cart' button in the
+  bottom to remove all of the products to make the cart empty.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#### Empty cart part<a id="empty"></a>
+
+![image info](./public/img/empty-cart.jpeg)
+
+- When the cart is empty or users have not added any phone to cart, it will
+  show users 'the cart is empty'.
+
+#### Contact page<a id="contact"></a>
+
+![image info](./public/img/contact-page.jpeg)
+
+- When users would like to contact with us, they can click the 'phone call' image in the header part
+  it will go to contact us page so users can input their email or messages to us.
+
+#### Error page<a id="error"></a>
+
+![image info](./public/img/error-page.jpeg)
+
+- If users make a mistake to enter a wrong web link, it will show users '404' page.
+- From the error 404 page, users can go to home page by clicking 'go back home' button.
+
+## What did I learn?<a id="learn"></a>
+
+#### Delopyment
+
+- I use this section to deploy live pages in Github: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+- I also use [Netlify](https://www.netlify.com/?utm_source=google&utm_medium=paid_search&utm_campaign=12755510784&adgroup=118788138897&utm_term=netlify&utm_content=kwd-371509120223&creative=514583565825&device=c&matchtype=e&location=9071326&gclid=Cj0KCQjwg_iTBhDrARIsAD3Ib5j3qovL2scHdTLIhKf6BPgQfvjSfufkbBwjZOTySxzgjB4NOpgngKIaArspEALw_wcB) to deploy live pages using Github repo's existing project.
+
+- When I met deploy errors, I followed this video to correct my error. Finally, I deployed my live page successfully after following the author's advice.[CI= yarn run build]
+
+- [PedroTech](https://www.youtube.com/watch?v=8KGLOJHqNMg)
+  In his video, he show us how to deploy a react js application to Netlify. It is very easy to do this, and it allows continuous deployment through github!
+
+#### Code Splitting
+
+- I learned how to split code into different folders to get best practice.
+  This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+#### npm run build
+
+- I use 'npm run build' to bundles React in production mode, which can optimize the build to get the best performance.
+  Builds the app for production to the `build` folder.
+  The build is minified and the filenames include the hashes.
+  After build, the app is ready to be deployed!
+  See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+#### create-react-app
+
+- I learned how to use 'create-react-app' to build small projects, and how to install node-modules before start the project.
+  In the process, I have not used Redux and Hooks, all of the states have been stored in their own components.
+  I used class components and function components as well.
+
+#### How to transfer state between parents and children
+
+- I use this phone store project to practice my 'hooks' and 'redux' skills
+- I use **hooks** without 'redux' to finished this project such as 'useReducer', 'useEffect','useContext'.
+- Also, I created a new git branch named 'redux', and use **redux** such as 'mapStateToProps', 'mapDispatchToProps' to get global
+  states and methods, then passing them to components which needed to use those global states.
+- I use '**Sematic UI**' to render the format of detail page.
+- I use '**Ant design**' grid to render the cart page.
+- I use 'styled-components' to render CSS style.
+
+## Improvements <a id="future"></a>
+
+- will add some **react-icons** and use some UI libraries such as Ant Design or Material UI to render the style.
+- will import **google-fonts** to create different word format.
+- will write test code using **'JEST'** for this project.
+- I know it will mess the CSS projects if there are different UI libraries used in one project, maybe they will affect each other's style
+  so in next project, I decide to use just one UI package.
+- I will encapsulate the 'button' component, as I found there are more than one place need to use 'button', so I decide to encapsulate one 'button'
+  component, which can make code easily and conveniently. For example, detail page can import 'button' component, and no necessary to write its button style at all.
+- I will make my project more responsive in different size of devices.
+
+`npm test`
+
+- Launches the test runner in the interactive watch mode.
+  See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+`Learn More`
+
+- You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
