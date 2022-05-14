@@ -20,12 +20,12 @@ export const ListComponentWrapper = styled.div`
   // line-height: 20px;
   // margin: -1px -1px;
   overflow: hidden;
-  margin: 10px 10px;
+  margin: 10px 30px;
   background-color: white;
 
   // height 宽度不用写固定，后期可以调整
   // height: 400px;
-  display: block;
+  // display: block;
   border: 1px solid lightgray;
   border-radius: 10px;
 
