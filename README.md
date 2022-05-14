@@ -146,8 +146,6 @@ It will show users the subtotal, tax and total amount of his or her cart.
 #### create-react-app
 
 - I learned how to use 'create-react-app' to build small projects, and how to install node-modules before start the project.
-  In the process, I have not used Redux and Hooks, all of the states have been stored in their own components.
-  I used class components and function components as well.
 
 #### How to transfer state between parents and children
 
