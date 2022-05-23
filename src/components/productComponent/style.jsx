@@ -55,6 +55,7 @@ export const ImageWrapper = styled.div`
   height: 200px;
   padding: 10px;
   background: #fff;
+  z-index: 1;
 `;
 
 export const Image = styled.img`

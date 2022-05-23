@@ -14,6 +14,7 @@ export const HeaderWrapper = styled.div`
   border-bottom: 3px solid lightgray;
   padding: 10px;
   padding-bottom: 15px;
+  z-index: 3;
 
   background-color: #4183c4;
   // flex-direction: row;
