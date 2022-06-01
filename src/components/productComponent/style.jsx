@@ -6,16 +6,17 @@ import breakpoint from "../../breakpoints";
 export const ProductWrapper = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
-  align-content: center;
+  // align-items: center;
+  // align-content: center;
   flex-direction: row;
   flex-wrap: wrap;
   // box-sizing: border-box;
-  margin: 0 300px;
+  // margin: 0 300px;
 `;
 
 export const ListComponentWrapper = styled.div`
   // box-sizing: border-box;
+
   cursor: pointer;
   // line-height: 20px;
   // margin: -1px -1px;
@@ -25,7 +26,7 @@ export const ListComponentWrapper = styled.div`
 
   // height 宽度不用写固定，后期可以调整
   // height: 400px;
-  // display: block;
+  display: block;
   border: 1px solid lightgray;
   border-radius: 10px;
 
@@ -49,19 +50,20 @@ export const ImageWrapper = styled.div`
   // 当hover的时候，会出现向左向上的移动
   overflow: hidden;
   position: relative;
-
-  width: 180px;
+  //  不用写死width 和 height， 可以写100%， 这样无论是什么device width，都会展示100% 的效果。。。
+  // 对 responsive 有好处。写死的话，找bug很难找。
+  width: 240px;
   margin: 0 auto;
-  height: 200px;
+  height: 100%;
   padding: 10px;
   background: #fff;
   z-index: 1;
 `;
 
 export const Image = styled.img`
-  height: 190px;
-  width: 165px;
-  margin-right: 10px;
+  height: 100%;
+  width: 100%;
+  // margin-right: 10px;
 
   //  style components 写hover的方法，表示在点击ListComponentWrapper 下， 图片也发生变化
   // 这种写法只适合 父子类 的 效果。。。， 不是父子不起效果。
@@ -145,7 +147,7 @@ export const CartWrapper = styled.button`
   font-size: 25px;
   position: absolute;
   bottom: -50px;
-  right: -50px;
+  right: -80px;
   border: none;
 
   // 可以打开网站，看css 样式调整颜色
